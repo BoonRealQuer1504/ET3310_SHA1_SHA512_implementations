@@ -1,12 +1,10 @@
 /**
- * @file sha1.h
- * @author Ma Duc (mavietduc@gmail.com)
- * 
- * @version 0.1
- * @date 2023-01-02
- * 
- * @copyright Copyright (c) 2023
- * 
+Course: Theory of Cryptography - ET3310
+Lecturers: Do Trong Tuan, Ma Viet Duc
+School: Hanoi University of Science and Technology - HUST
+Group: 4
+Students: Nguyen Ho Trieu Duong - C41 , Nguyen Tien Dat - C42, Vu Tien Dat - C43
+Created: Wed 03 Dec 2025 12:26:39 Hanoi, Vietnam
  */
 
 #ifndef _SHA512_H_

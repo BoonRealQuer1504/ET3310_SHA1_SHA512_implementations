@@ -1,5 +1,10 @@
 /**
-
+Course: Theory of Cryptography - ET3310
+Lecturers: Do Trong Tuan, Ma Viet Duc
+School: Hanoi University of Science and Technology - HUST
+Group: 4
+Students: Nguyen Ho Trieu Duong - C41 , Nguyen Tien Dat - C42, Vu Tien Dat - C43
+Created: Wed 03 Dec 2025 12:26:19 Hanoi, Vietnam
  */
 #include "sha512.h"
 #include <string.h>
