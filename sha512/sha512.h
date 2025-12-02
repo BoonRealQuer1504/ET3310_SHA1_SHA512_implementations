@@ -9,8 +9,8 @@
  * 
  */
 
-#ifndef _SHA1_H_
-#define _SHA1_H_
+#ifndef _SHA512_H_
+#define _SHA512_H_
 
 #include <stdint.h>
 #include <stdio.h>
@@ -25,20 +25,20 @@ enum
     shaStateError       /* loi :)*/
 };
 #endif
-#define SHA1HashSize 20
+#define SHA512HashSize 64     /*HashResults=64 bytes*/
 
 /*
  *  Structure cua khoi thuc hien SHA1
  */
-typedef struct SHA1Context
+typedef struct SHA512Context
 {
-    uint32_t Intermediate_Hash[SHA1HashSize/4];
+    uint64_t Intermediate_Hash[8]; /*Mang ket qua 8 phan tu 64 bit --> 512 bit*/
 
-    uint32_t Length_Low;
-    uint32_t Length_High;
+    uint64_t Length_Low;
+    uint64_t Length_High;
 
-    int_least16_t Message_Block_Index;
-    uint8_t Message_Block[64];
+    int Message_Block_Index;
+    uint8_t Message_Block[128];  /*Blocksize=1024 bit --> 128 phan tu*/
 
     int Computed;
     int Corrupted;
@@ -46,16 +46,16 @@ typedef struct SHA1Context
 
     uint8_t Print_Block_Input;     /* Optional, print binary tung khoi */
 
-} SHA1Context;
+} SHA512Context;
 
 /*
  *  Function Prototypes
  */
-int SHA1Reset(  SHA1Context *);
-int SHA1Input(  SHA1Context *,
+int SHA512Reset(  SHA512Context *);
+int SHA1512nput(  SHA512Context *,
                 const uint8_t *,
                 unsigned int);
-int SHA1Result( SHA1Context *,
-                uint8_t Message_Digest[SHA1HashSize]);
+int SHA512Result( SHA512Context *,
+                uint8_t Message_Digest[SHA512HashSize]);
 
 #endif

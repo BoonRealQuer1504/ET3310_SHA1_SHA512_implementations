@@ -1,7 +1,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
-#include "sha1.h"
+#include "sha1.c"
 
 int main(int argc, char* argv[]){
     SHA1Context sha;
