@@ -355,7 +355,7 @@ for(t = 16; t < 80; t++)
 
 - Vòng lặp chính: Hàm nén thực hiện 80 vòng lặp, cập nhật 8 biến trạng thái trong mỗi vòng. Chi tiết:
 
- _    - Tính toán giá trị temp1:_
+    - _Tính toán giá trị temp1:_
 ```
 uint64_t temp1 = H + SIG1(E) + ((E & F) ^ ((~E) & G)) + K[t] + W[t]; /*Conditional Function*/
 ```
@@ -365,7 +365,7 @@ trong đó: SIG1(E) chính là hàm Rotate(E)
 
 Ch(E, F, G): hàm Conditional(E, F, G) = ((E & F) ^ ((~E) & G)) 
    
- _   - Tính toán giá trị T2: _
+   - _Tính toán giá trị T2:_
 
 ```
 uint64_t temp2 = SIG0(A) + ((A & B) ^ (A & C) ^ (B & C)); /*Majority Function*/
@@ -374,14 +374,14 @@ với SIG0(A) là hàm Rotate(A)
 
 Maj(A, B, C): hàm Majority(A,B,C) = ((A & B) ^ (A & C) ^ (B & C))
 
-_
-    - Cập nhật Trạng thái theo quy tắc sau: _
+
+   - _Cập nhật Trạng thái theo quy tắc sau:_
 
 ```
         H = G;
         G = F;
         F = E;
-        E= D + temp1;
+        E = D + temp1;
         D = C;
         C = B;
         B = A;
