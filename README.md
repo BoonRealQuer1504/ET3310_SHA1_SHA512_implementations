@@ -17,6 +17,7 @@ _Báo cáo này trình bày quá trình phân tích mã nguồn SHA-1 ban đầu
 _Quá trình này minh họa rõ ràng sự khác biệt về kiến trúc giữa SHA-1 (32-bit) và SHA-512 (64-bit), đồng thời cho thấy cách áp dụng mô hình Merkle–Damgård chung cho cả hai thuật toán._
 
 _Original Project created by  * @author Ma Duc (mavietduc@gmail.com)_
+
 _Tài liệu hướng dẫn: [nist.fips.180-4.pdf](nist.fips.180-4.pdf)_
 
 ## 1. Phân tích cấu trúc SHA-1 đã cho.
